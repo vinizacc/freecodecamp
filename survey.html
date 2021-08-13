@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>
+      Survey Form
+    </title>
+    <style>
+      body{
+        background: rgb(54, 54, 54);
+        color: white;
+        font-family: calibri;
+      }
+      main{
+        background: rgba(72,61,139,0.6);
+        width: 50vw;
+        margin: auto;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: solid 2px black;
+        margin: 10px;
+        padding: 15px;
+      }
+      #survey-form{
+
+      }
+      #name-label, #email-label, #number-label {
+        margin: 10px;
+        padding: 10px;
+        border: solid 2px black;
+      }
+    </style>
+    </head>
+  <body>
+    <main>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Formulario de perguntas sobre cachorros</p>
+      <form id="survey-form">
+        <label id="name-label">Nome
+        <input type="text" id="name" placeholder="Digite o nome">
+        </label>
+        <label id="email-label">E-mail
+        <input type="email" id="email" placeholder="Digite o e-mail" required>
+        </label>
+        <label id="number-label">Idade
+        <input type="number" id="number" min="0" max="100" placeholder="idade">
+        </label>
+        <div>
+          <label for="dogs">Escolha sua raça de cão favorito</label>
+          <select name="dogs" id="dropdown">
+            <option>Labrador</option>
+            <option>Pinscher</option>
+            <option>Bulldog</option>
+          </select>
+          <label>Cor de pelo do cão:</label>
+          <label>
+            <input type="radio" name="ident" value="caramelo" checked>
+            Caramelo
+          </label>
+          <label>
+            <input type="radio" name="ident" value="preto">
+            Preto
+          </label>
+          <label>
+            <input type="radio" name="ident" value="mesclado">
+            Mesclado
+          </label>
+          <div>
+            <label>Escolha abaixo a quantia de cães da mesma raça e cor</label>
+            <label>
+              <input type="checkbox" name="quantidade" value="1">
+              1
+            </label>
+            <label>
+              <input type="checkbox" name="quantidade" value="2">
+              2
+            </label>
+            <label>
+              <input type="checkbox" name="quantidade" value="3">
+              3
+            </label>
+          </div>
+        </div>
+        
+        <p>Alguma sugestão?</p>
+        <textarea name="sugestao" placeholder="Entre com a sugestão" cols="50" rows="5"></textarea>
+
+        <input type="button"  value="Submiter" style="margin-top: 10px; padding: 5px;">
+    </form>
+    </main>
+  </body>
+</html>

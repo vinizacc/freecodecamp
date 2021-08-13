@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Technical Docmentation</title>
+	<style>
+		body{
+			min-width: 290px;
+			font-family: calibri;
+			line-height: 1.5;
+			display: inline-flex;
+		}		
+		a{
+			text-decoration: none;
+			color: black;
+			border-bottom: solid 2px black;
+		}
+		nav{
+			border: solid 2px black;
+			position: fixed;
+		    min-width: 290px;
+		    top: 0px;
+		    left: 0px;
+		    width: 300px;
+		    height: 100%;
+		}
+		#main-doc{
+			position: absolute;
+			margin-left: 310px;
+			padding: 20px;
+			margin-bottom: 110px;
+		}
+		header{
+			padding-left: 5px;
+		}
+		li{
+			list-style-type: none;
+			padding: 5px;
+		}
+		ul{
+			padding: 0;
+			margin: 0;
+		}
+		table{
+			width: 50%;
+		}
+		thead, tbody, th, tr, td{
+			border: solid 1px black;
+		}
+		thead{
+			background: lightgray;
+		}
+		th, td {
+			padding: 15px;
+		}
+		
+	</style>
+</head>
+<body>
+	<nav id="nav-bar">
+		<header>HTML - Documentação</header>
+			<ul id="toc-entries">
+				<li>
+					<a href="#elementos_basicos">Elementos básicos</a>
+				</li>
+				<li>
+					<a href="#metadados_do_documento">Metadados do documento</a>
+				</li>
+				<li>
+					<a href="#separação_de_conteudo">Separação de conteúdo</a>
+				</li>
+				<li>
+					<a href="#conteudo_textual">Conteúdo textual</a>
+				</li>
+				<li>
+					<a href="#semanticas_textuais_inline">Semânticas textuais inline</a>
+				</li>
+				<li>
+					<a href="#imagem_e_multimidia">Imagem e multimídia</a>
+				</li>
+				<li>
+					<a href="#conteudo_integrado">Conteúdo integrado</a>
+				</li>
+				<li>
+					<a href="#scripting">Scripting</a>
+				</li>
+				<li>
+					<a href="#demarcando_edicoes">Demarcando edições</a>
+				</li>
+				<li>
+					<a href="#conteudo_tabulado">Conteúdo tabulado</a>
+				</li>
+				<li>
+					<a href="#formularios">Formulários</a>
+				</li>
+				<li>
+					<a href="#elementos_interativos">Elementos interativos</a>
+				</li>
+				<li>
+					<a href="#componentes_web">Componentes Web</a>
+				</li>
+				<li>
+					<a href="#elementos_obsoletos">Elementos obsoletos</a>
+				</li>
+			</ul>
+	</nav>
+	<main id="main-doc">
+		<p>Site quem foi pego o conteudo: https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element#elementos_b%C3%A1sicos</p>
+		<h1>Elementos HTML</h1>
+		<p>Esta página lista todos os elementos HTML. Eles são agrupados por função para ajuda-lo a achar o que quer fácilmente. Apesar deste guia ser escrito para aqueles mais inexperientes com a programação, nós esperamos que seja útil para todos.</p>
+		<section id="elementos_basicos" class="main-section">
+			<h2>Elementos básicos</h2>
+			<p>Elementos básicos são o que constituem a base de todo documento HTML. Se vê esses elementos no código fonte de todas as páginas da web, logo em seguida da declaração de doctype, que está na primeira linha da página. O doctype específica qual a versão de (X)HTML que a página está usando. Os elementos que formam o conteúdo da página são postos entre a tag de abertura < html> e a tag de fechamento < /html>. O elemento < html> é também conhecido como o elemento raiz.</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Elemento</th>
+						<th>Descrição</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>< html></td>
+						<td>O elemento HTML < html> (ou HTML root element) representa a raiz de um HTML ou XHTML documento. Todos os outros elementos devem ser descendentes desse elemento.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</section>
+		<section id="metadados_do_documento" class="main-section">
+			<h2>Metadados do documento</h2>
+			<p>Os metadados são onde se guardam várias informações sobre a página, incluindo informações sobre estilos, scripts e dados para auxiliar software (ferramentas de pesquisa (en-US), navegadores, etc) usar e renderizar a página. Os metadados de estilos e scripts podem ser definidos dentro da própria página ou escritos em um arquivo externo que é referênciado pela mesma.</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Elemento</th>
+						<th>Descrição</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>< base></td>
+						<td>O elemento HTML Base (< base>) especifica o endereço (URL) utilizada por todos os endereços relativos contidos dentro de um documento. Há um número máximo de 1 (um) elemento Base < base> do documento.</td>
+					</tr>
+					<tr>
+						<td>< head></td>
+						<td>The HTML < head> elemento providencia informações gerais (metadados) sobre  document, incluindo seu título e links para scripts e folhas de estilos.</td>
+					</tr>
+					<tr>
+						<td>< link></td>
+						<td>O Elemento HTML < link> especifica as relações entre o documento atual e um recurso externo. Possíveis usos para este elemento incluem a definição de uma estrutura relacional para navegação. Este elemento é mais usado para vincular as folhas de estilo.</td>
+					</tr>
+					<tr>
+						<td>< meta</td>
+						<td>O elemento HTML < meta> define qualquer informação de metadados que não podem ser definidos por outros elementos HTML. (base, link, script, style ou title).</td>
+					</tr>
+					<tr>
+						<td>< style></td>
+						<td>O elemento HTML < style> contém informações de estilo para um documento ou uma parte do documento. As informações de estilo específico estão contidas dentro deste elemento, geralmente no CSS.</td>
+					</tr>
+					<tr>
+						<td>< title></td>
+						<td>O elemento HTML < title> (Elemento HTML Título) define o título do documento, mostrado na barra de título de um navegador ou na aba da página. Pode conter somente texto e quaisquer marcações contidas no texto não são interpretadas.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="separação_de_conteudo" class="main-section">
+			<h2>Separação de conteúdo</h2>
+			<p>Elementos de separação de conteúdo permitem organizar o conteúdo do documento em partes lógicas. Use elementos de separação para criar um esboço do conteúdo da página, incluindo navegação por cabeçalho e rodapé, e elementos de cabeçalho para identificar seções de conteúdo.</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Elemento</th>
+						<th>Descrição</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>< address></td>
+						<td>O elemento HTML < address> fornece informações de contato para seu ancestral article ou body mais próximo; no segundo caso, ele se aplica ao documento inteiro.</td>
+					</tr>
+					<tr>
+						<td>< article></td>
+						<td>O Elemento HTML Article (< article>) representa uma composição independente em um documento, página, aplicação, ou site, ou que é destinado a ser distribuido de forma independente ou reutilizável, por exemplo, em sindicação. Este poderia ser o post de um fórum, um artigo de revista ou jornal, um post de um blog, um comentário enviado por um usuário, um gadget ou widget interativos, ou qualquer outra forma de conteúdo independente.</td>
+					</tr>
+					<tr>
+						<td>< aside></td>
+						<td>O elemento HTML < aside> representa uma seção de uma página que consiste de conteúdo que é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo. Essas seções são, muitas vezes, representadas como barras laterais. Elas muitas vezes contem explicações laterais, como a definição de um glossário; conteúdo vagamente relacionado, como avisos; a biografia do autor; ou, em aplicações web, informações de perfil ou links de blogs relacionados.</td>
+					</tr>
+					<tr>
+						<td>< footer></td>
+						<td>O elemento HTML de Rodapé (< footer>) representa um rodapé para o seu sectioning content (conteúdo de seção) mais próximo ou sectioning root elemento (ou seja, seu parente mais próximo article, aside, nav, section, blockquote, body, details, fieldset, figure, td). Normalmente um rodapé contém informações sobre o autor da seção de dados, direitos autorais ou links para documentos rela</td>
+					</tr>
+					<tr>
+						<td>< header></td>
+						<td>O elemento HTML < header> representa um grupo de suporte introdutório ou navegacional. Pode conter alguns elementos de cabeçalho mas também outros elementos como um logo, seções de cabeçalho, formulário de pesquisa, e outros.</td>
+					<tr>
+						<td>< h1> (en-US), < h2> (en-US), < h3> (en-US), < h4> (en-US), < h5> (en-US), < h6> (en-US)</td>
+						<td>Os elementos HTML < h1>–< h6> representam seis níveis de título de seção. < h1> é o nível de seção mais alto e < h6> é o mais baixo.</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="conteudo_textual" class="main-section">
+			<h2>Conteúdo textual</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="semanticas_textuais_inline" class="main-section">
+			<h2>Semânticas textuais inline</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="imagem_e_multimidia" class="main-section">
+			<h2>Imagem e multimídia</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="conteudo_integrado" class="main-section">
+			<h2>Conteúdo integrado</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="scripting" class="main-section">
+			<h2>Scripting</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="demarcando_edicoes" class="main-section">
+			<h2>Demarcando edições</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="conteudo_tabulado" class="main-section">
+			<h2>Conteúdo tabulado</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="formularios" class="main-section">
+			<h2>Formulários</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="elementos_interativos" class="main-section">
+			<h2>Elementos interativos</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="componentes_web" class="main-section">
+			<h2>Componentes web</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="elementos_obsoletos" class="main-section">
+			<h2>Elementos obsoletos</h2>
+			<p></p>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</main>
+</body>
+</html>

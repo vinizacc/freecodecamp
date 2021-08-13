@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lading Page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<style>
+		body{
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  font-family: Roboto;
+		}
+		header{
+		  position: sticky;
+		  top: 0px;
+		  left: 0px;
+		  display: flex;
+		  align-items: center;
+		  justify-content: space-between;
+		  width: 100%;
+		  height: 10vh;
+		  overflow: hidden;
+		  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+		  background: #d4af37
+		}
+		a{
+		  padding-left: 50px;
+		  padding-right: 10px;
+		  margin: 2px;
+		}
+		header > img {
+		  width: 15%;
+
+		}
+		#video{
+		  padding-top: 40px;
+		}
+		p{
+		  text-align: center;
+		}
+		form{
+		  display: flex;
+		  flex-direction: column;
+		}
+		input[type=email], input[type=button]{
+		  margin-top: 10px;
+		}
+		textarea{
+		  resize: none;
+		}
+		input[type=email]:invalid{
+		  color: red;
+		}
+		img{
+		  margin-top: 30px;
+		}
+		@media (max-width:600px){
+		  img{
+		    width: 70%;
+		  }
+		}
+	</style>
+</head>
+<body>
+	<header id="header">
+		<img src="surveylogo.jpg"  id="header-img"/>
+		<nav id="nav-bar">
+			<a href="#variedade" class="nav-link">Variedades</a>
+			<a href="#entrega" class="nav-link">Entrega</a>
+			<a href="#fale" class="nav-link">Fale conosco</a>
+			
+		</nav>
+	</header>
+
+	<video id="video"src="http://www.youtube.com/v/pDMQPs-qkM4" type="application/x-shockwave-flash" width="425" height="350" >
+	</video>
+	<section id="variedade">
+		<h2>10 charutos preferidos da melhor sommelier do mundo</h2>
+		<ol>
+			<li><strong>Cohiba Espléndido</strong> - Origem: Cuba</li>
+			<li><strong>Alonso Menendez Nº 10 Churchill</strong> - Origem: Brasil</li>
+			<li><strong>Davidoff Millenium Blend Robusto</strong> - Origem: República Dominicana</li>
+			<li><strong>Montecristo Nº 2</strong> - Origem: Cuba</li>
+			<li><strong>Partagás 8-9-8</strong> - Origem: Cuba</li>
+			<li><strong>Plasencia Reserva Orgánica</strong> - Origem: Nicarágua</li>
+			<li><strong>Ramón Allones Specially Selected</strong> - Origem: Cuba</li>
+			<li><strong>Romeo y Julieta Short Churchills</strong> - Origem: Cuba</li>
+			<li><strong>San Cristóbal de la Habana El Principe</strong> - Origem: Cuba</li>
+			<li><strong>VegaFina Master 2012</strong> - Origem: República Dominicana</li>
+		</ol>
+	</section>
+	<section id="entrega">
+		<picture>
+			<img src="envio.png">
+		</picture>
+	</section>
+	<section id="fale">
+		<form id="form" action="https://www.reecodecamp.com/email-enviar" method="POST">
+			<p>Alguma pergunta?</p>
+			<textarea id="duvida" cols="70" rows="10" placeholder="Entre aqui com alguma duvida sobre a nossa marca ou sobre charutos no geral"></textarea>
+			<label for="email"></label>
+			<input type="email" id="email" name="email" placeholder="Entre com o email">
+			<input type="button" id="submit" name="button" value="Submiter">
+		</form>
+	</section>
+</body>
+</html>
